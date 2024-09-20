@@ -47,6 +47,7 @@ jobs:
         with:
           node-version: '16'  # Node.js 버전 지정
       - run: npm install
+      - run: npm install bootstrap
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --trace --baseurl "${{ steps.pages.outputs.base_path }}"
